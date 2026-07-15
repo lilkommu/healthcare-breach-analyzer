@@ -1,0 +1,76 @@
+feature,mean_abs_shap
+Primary Breach Type_Hacking/IT Incident,0.47065502
+Primary Location_Network Server,0.28280705
+Year,0.20818833
+Month,0.116946615
+Primary Location_Paper/Films,0.104758054
+Business Associate Present_No,0.1010778
+Primary Breach Type_Unauthorized Access/Disclosure,0.09500633
+Covered Entity Type_Business Associate,0.08454069
+Primary Location_Email,0.07065055
+Covered Entity Type_Healthcare Provider,0.069886096
+Covered Entity Type_Health Plan,0.06118118
+Business Associate Present_Yes,0.03524697
+State_FL,0.029173763
+Primary Location_Electronic Medical Record,0.026287688
+State_GA,0.021843845
+Primary Breach Type_Loss,0.018470164
+State_CA,0.018084636
+State_OH,0.016766522
+State_TX,0.01614105
+State_NY,0.014403152
+State_MO,0.01247184
+Primary Breach Type_Improper Disposal,0.012376967
+Primary Location_Other,0.0114736855
+State_MA,0.01130304
+State_OR,0.010957479
+State_MD,0.010790184
+State_MI,0.01064186
+State_IL,0.010120291
+Primary Breach Type_Other,0.010054644
+State_PA,0.009495257
+State_NJ,0.009284406
+State_OK,0.009074893
+State_AZ,0.008708771
+Primary Breach Type_Theft,0.00832268
+State_IN,0.007966567
+State_PR,0.007940995
+State_TN,0.007626476
+State_VA,0.007251067
+State_NC,0.0066500446
+Primary Location_Desktop Computer,0.0065752263
+State_AL,0.0062340684
+State_IA,0.00564834
+Primary Location_Other Portable Electronic Device,0.0055378783
+State_CO,0.0050458163
+State_WV,0.005022403
+State_MS,0.004916085
+State_KY,0.004831429
+Primary Location_Laptop,0.004633324
+State_WI,0.0046300227
+State_WA,0.0043471293
+State_WY,0.0042578382
+State_CT,0.0042453073
+State_DE,0.0041951234
+State_DC,0.0036955797
+State_UT,0.003685166
+State_SC,0.003658208
+State_MT,0.0035286257
+State_AR,0.003289666
+State_MN,0.0031409229
+State_HI,0.0030495843
+State_RI,0.0029124944
+State_NE,0.0026423002
+State_NH,0.0023345973
+State_KS,0.002325013
+State_LA,0.0022853531
+State_ME,0.0015793907
+Covered Entity Type_Healthcare Clearing House,0.0013582167
+State_SD,0.0013353318
+State_AK,0.0013014672
+State_NV,0.0012905407
+State_NM,0.0011496575
+State_ID,0.0004196168
+State_VT,0.00019236699
+State_ND,0.00016618945
+Primary Breach Type_Unknown,0.0

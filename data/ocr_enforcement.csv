@@ -1,0 +1,66 @@
+date,entity,amount_usd,action_type,source_url
+2025-04-23,PIH Health,600000,settlement,https://www.hhs.gov/sites/default/files/ocr-hipaa-racap-pih.pdf
+2025-03-06,Oregon Health & Science University,200000,civil_money_penalty,https://www.hhs.gov/about/news/2025/03/06/hhs-office-civil-rights-imposes-200000-penalty-against-oregon-health-science-university-failure-provide-timely-access-patient-records.html
+2025-02-20,Warby Parker,1500000,civil_money_penalty,https://www.hhs.gov/about/news/2025/02/20/hhs-imposes-1500000-penalty-against-warby-parker-hipaa-hacking.html
+2025-01-15,Northeast Surgical Group,10000,settlement,https://www.hhs.gov/about/news/2025/01/15/hhs-office-civil-rights-settles-hipaa-ransomware-cybersecurity-investigation-northeast-surgical-group.html
+2025-01-14,Solara Medical Supplies LLC,3000000,settlement,https://www.hhs.gov/about/news/2025/01/14/hhs-office-civil-rights-settles-hipaa-phishing-cybersecurity-investigation-solara-medical-supplies-3000000.html
+2024-12-05,Children's Hospital Colorado,548265,civil_money_penalty,https://www.hhs.gov/about/news/2024/12/05/hhs-ocr-imposes-548-265-penalty-against-childrens-hospital-colorado-hipaa-privacy-security-rules-violations.html
+2024-12-03,Gulf Coast Pain Consultants,1190000,civil_money_penalty,https://www.hhs.gov/about/news/2024/12/03/hhs-ocr-imposes-penalty-against-gulf-coast-pain-consultants.html
+2024-11-19,Rio Hondo Community Mental Health Center,100000,civil_money_penalty,https://www.hhs.gov/about/news/2024/11/19/hhs-office-civil-rights-imposes-penalty-mental-health-center-failure-provide-timely-access-patient-records.html
+2024-10-17,Gums Dental Care,70000,civil_money_penalty,https://www.hhs.gov/about/news/2024/10/17/hhs-office-civil-rights-imposes-70000-civil-monetary-penalty-against-gums-dental-care-failure-provide-timely-access-patient-records.html
+2024-10-03,Providence Medical Institute,240000,civil_money_penalty,https://www.hhs.gov/about/news/2024/10/03/hhs-ocr-imposes-civil-monetary-penalty-against-providence-medical-institute-hipaa-ransomware-cybersecurity-investigation.html
+2024-02-06,Montefiore Medical Center,4750000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/montiefore/index.html
+2023-06-28,iHealth Solutions,75000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/ihealth-ra-cap/index.html
+2023-06-15,Yakima Valley Memorial Hospital,240000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/yakima-ra-cap/index.html
+2023-05-16,MedEvolve,350000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/medevolve-ra-cap/index.html
+2022-07-14,Oklahoma State University Center for Health Sciences,875000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/osu/index.html
+2021-01-15,Excellus Health Plan,5100000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/excellus/index.html
+2020-10-28,Aetna,1000000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/aetna/index.html
+2020-09-25,Premera Blue Cross,6850000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/premera/index.html
+2020-09-23,CHSPSC LLC,2300000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/chspsc/index.html
+2020-09-21,Athens Orthopedic Clinic,1500000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/athens-orthopedic/index.html
+2020-07-27,Lifespan,1040000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/lifespan/index.html
+2020-03-03,Porter,100000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/porter/index.html
+2019-12-30,West Georgia Ambulance,65000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/westgeorgia/index.html
+2019-11-26,Sentara Hospitals,2175000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/sentara/index.html
+2019-11-07,Texas Health and Human Services Commission,1600000,civil_money_penalty,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/txhhsc/index.html
+2019-11-05,University of Rochester Medical Center,3000000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/urmc/index.html
+2019-10-23,Jackson Health System,2150000,civil_money_penalty,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/jackson/index.html
+2019-10-02,Elite Dental Associates,10000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/elite/index.html
+2019-05-23,Medical Informatics Engineering,100000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/mie/index.html
+2019-05-06,Touchstone Medical Imaging,3000000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/tmi/index.html
+2019-02-07,Cottage Health,3000000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/cottage/index.html
+2018-10-15,Anthem,16000000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/anthem/index.html
+2018-06-18,MD Anderson Cancer Center,4300000,civil_money_penalty,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/mdanderson/index.html
+2017-05-23,St. Luke's-Roosevelt Hospital Center,387000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/stlukes/index.html
+2017-04-24,CardioNet,2500000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/cardionet/index.html
+2017-04-20,Center for Children's Digestive Health,31000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/ccdh/index.html
+2017-04-12,Metro Community Provider Network,400000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/MCPN.html
+2017-02-16,Memorial Healthcare System,5500000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/memorial/index.html
+2017-01-09,Presence Health,475000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/presence/index.html
+2016-10-17,St. Joseph Health,2140000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/sjh/index.html
+2016-08-04,Advocate Health Care Network,5550000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/ahcn/index.html
+2016-07-21,University of Mississippi Medical Center,2750000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/UMMC/index.html
+2016-07-18,Oregon Health & Science University,2700000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/ohsu/index.html
+2016-06-29,Catholic Health Care Services,650000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/catholic-health-care-services/index.html
+2016-04-21,New York-Presbyterian Hospital,2200000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/new-york-presbyterian-hospital/index.html
+2016-03-17,Feinstein Institute for Medical Research,3900000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/feinstein/index.html
+2016-03-16,North Memorial Health Care,1550000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/north-memorial-health-care/index.html
+2016-02-03,Lincare,239800,civil_money_penalty,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/lincare/index.html
+2015-12-14,University of Washington Medicine,750000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/university-of-washington-medicine/index.html
+2015-11-30,Triple-S Management Corporation,3500000,settlement,https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/triple-s-management/index.html
+2015-08-31,Cancer Care Group,750000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/cancercare.html
+2014-06-23,Parkview Health System,800000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/parkview.html
+2014-05-07,New York-Presbyterian Hospital and Columbia University,4800000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/jointbreach-agreement.html
+2014-04-22,Concentra Health Services,1725220,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/stolenlaptops-agreements.html
+2014-04-22,QCA Health Plan,250000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/stolenlaptops-agreements.html
+2013-07-11,WellPoint,1700000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/wellpoint-agreement.html
+2013-06-13,Shasta Regional Medical Center,275000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/shasta-agreement.html
+2013-05-21,Idaho State University,400000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/isu-agreement.html
+2012-09-17,Massachusetts Eye and Ear Infirmary,1500000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/meei-agreement.html
+2012-06-26,Alaska Department of Health and Social Services,1700000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/alaska-agreement.html
+2012-03-13,Blue Cross Blue Shield of Tennessee,1500000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/bcbstagrmnt.html
+2011-02-14,Massachusetts General Hospital,1000000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/massgeneralra.html
+2011-02-04,Cignet Health,4300000,civil_money_penalty,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/cignetcmp.html
+2010-07-27,Rite Aid Corporation,1000000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/riteaidresagr.html
+2009-01-16,CVS Pharmacy,2250000,settlement,https://www.hhs.gov/ocr/privacy/hipaa/enforcement/examples/cvsresolutionagreement.html

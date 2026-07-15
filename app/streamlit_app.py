@@ -31,6 +31,28 @@ def load_data() -> pd.DataFrame:
 
 
 @st.cache_data
+def load_penalties() -> pd.DataFrame:
+    """Official HHS OCR enforcement actions joined to breaches (notebooks/enforcement.ipynb)."""
+    return pd.read_csv(BASE / "data" / "breach_penalties.csv", parse_dates=["enforcement_date"])
+
+
+@st.cache_resource
+def load_risk_model():
+    """XGBoost severity model + SHAP importances (notebooks/severity_model.ipynb)."""
+    import json
+
+    import joblib
+    imp = pd.read_csv(BASE / "models" / "shap_importance.csv")
+    try:
+        model = joblib.load(BASE / "models" / "xgb_severity.joblib")
+        with open(BASE / "models" / "xgb_feature_columns.json") as f:
+            cols = json.load(f)
+    except Exception:
+        model, cols = None, None
+    return model, cols, imp
+
+
+@st.cache_data
 def load_vectors() -> pd.DataFrame:
     """Attack-vector / remediation features mined from OCR narratives (notebooks/text_mining.ipynb)."""
     return pd.read_csv(BASE / "data" / "breach_vectors.csv")
@@ -83,8 +105,10 @@ k2.metric("Individuals affected", f"{f['Individuals Affected'].sum() / 1e6:,.1f}
 k3.metric("Median breach size", f"{f['Individuals Affected'].median():,.0f}")
 k4.metric("Hacking/IT share", f"{(f['Primary Breach Type'] == 'Hacking/IT Incident').mean():.0%}")
 
-tab_trends, tab_breakdown, tab_clusters, tab_vectors, tab_cost, tab_data = st.tabs(
-    ["Trends", "Breakdown", "Clusters", "How breaches happen", "Cost estimate", "Data"])
+(tab_trends, tab_breakdown, tab_clusters, tab_vectors, tab_risk,
+ tab_penalties, tab_cost, tab_data) = st.tabs(
+    ["Trends", "Breakdown", "Clusters", "How breaches happen", "Risk model",
+     "Penalties", "Cost estimate", "Data"])
 
 # ------------------------------------------------------------------ trends
 with tab_trends:
@@ -213,6 +237,78 @@ with tab_vectors:
                         width="stretch")
         st.caption("Rule-based extraction — no trained classifier; ~17% of narratives state no "
                    "clear mechanism and are labeled Other/unspecified.")
+
+# ------------------------------------------------------------------ risk model
+with tab_risk:
+    model, cols, imp = load_risk_model()
+    st.markdown(
+        "An XGBoost classifier predicts whether a newly reported breach will affect **10,000+ "
+        "individuals** using only fields available at report time (AUC 0.73 random split / 0.67 "
+        "temporal split — real but partial signal). SHAP values explain each factor's "
+        "contribution. Details: `notebooks/severity_model.ipynb`."
+    )
+    top = imp.head(12).iloc[::-1]
+    st.plotly_chart(px.bar(top, x="mean_abs_shap", y="feature", orientation="h",
+                           title="What drives predicted breach severity (mean |SHAP|)"),
+                    width="stretch")
+
+    if model is not None:
+        st.subheader("What-if risk scorer")
+        c1, c2, c3 = st.columns(3)
+        w_et = c1.selectbox("Covered entity type", sorted(df["Covered Entity Type"].dropna().unique()))
+        w_bt = c1.selectbox("Breach type", sorted(df["Primary Breach Type"].dropna().unique()))
+        w_loc = c2.selectbox("Location of information",
+                             sorted(df["Location of Breached Information"].dropna()
+                                    .str.split(",").str[0].str.strip().unique()))
+        w_ba = c2.selectbox("Business associate present", ["No", "Yes"])
+        w_state = c3.selectbox("State", sorted(df["State"].dropna().unique()),
+                               index=sorted(df["State"].dropna().unique()).index("CA"))
+        w_year = c3.number_input("Submission year", 2009, 2030, 2026)
+
+        row = pd.DataFrame([{c: 0 for c in cols}])
+        for key in [f"Covered Entity Type_{w_et}", f"Primary Breach Type_{w_bt}",
+                    f"Primary Location_{w_loc}", f"Business Associate Present_{w_ba}",
+                    f"State_{w_state}"]:
+            if key in row.columns:
+                row[key] = 1
+        row["Year"], row["Month"] = w_year, 6
+        prob = float(model.predict_proba(row[cols])[0, 1])
+        st.metric("Predicted probability of a 10,000+ individual breach", f"{prob:.0%}")
+        st.caption("Directional estimate from historical patterns — not a guarantee for any "
+                   "specific incident.")
+    else:
+        st.info("Model file not available in this deployment; showing SHAP importances only.")
+
+# ------------------------------------------------------------------ penalties
+with tab_penalties:
+    pen = load_penalties()
+    st.markdown(
+        "The only **non-estimated** dollars in this project: HIPAA settlements and civil money "
+        "penalties published by [HHS OCR](https://www.hhs.gov/hipaa/for-professionals/"
+        "compliance-enforcement/agreements/index.html), matched to breach reports at the "
+        "organization level (matching audited manually; `notebooks/enforcement.ipynb`). "
+        "Covers actions with amounts stated in the official listing."
+    )
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Enforcement actions matched", f"{len(pen)}")
+    c2.metric("Total penalties", f"${pen['amount_usd'].sum() / 1e6:,.0f} M")
+    c3.metric("Anthem penalty per record", "$0.20")
+
+    c4, c5 = st.columns(2)
+    yr = pen.assign(year=pen["enforcement_date"].dt.year).groupby("year")["amount_usd"].sum().reset_index()
+    c4.plotly_chart(px.bar(yr, x="year", y="amount_usd",
+                           title="Matched penalty dollars by year"), width="stretch")
+    sc = pen[pen["individuals_affected"] > 0]
+    c5.plotly_chart(px.scatter(sc, x="individuals_affected", y="amount_usd",
+                               hover_name="enforcement_entity", log_x=True, log_y=True,
+                               title="Penalty vs breach size (log-log) — weak link, Spearman 0.14"),
+                    width="stretch")
+    st.dataframe(pen[["enforcement_date", "enforcement_entity", "amount_usd", "action_type",
+                      "breach_entity", "breach_year", "individuals_affected"]]
+                 .sort_values("amount_usd", ascending=False),
+                 width="stretch", hide_index=True)
+    st.caption("Fewer than 1% of reported breaches result in a published financial penalty; "
+               "penalties target compliance failures found during investigation, not harm volume.")
 
 # ------------------------------------------------------------------ cost
 with tab_cost:
