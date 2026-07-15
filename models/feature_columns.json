@@ -1,0 +1,16 @@
+[
+  "log_affected",
+  "year",
+  "ba_present",
+  "bt_Hacking/IT Incident",
+  "bt_Improper Disposal",
+  "bt_Loss",
+  "bt_Other",
+  "bt_Theft",
+  "bt_Unauthorized Access/Disclosure",
+  "bt_Unknown",
+  "et_Business Associate",
+  "et_Health Plan",
+  "et_Healthcare Clearing House",
+  "et_Healthcare Provider"
+]

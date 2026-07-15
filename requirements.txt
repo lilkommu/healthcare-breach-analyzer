@@ -1,0 +1,11 @@
+# Dashboard (Streamlit Cloud installs from this file)
+streamlit>=1.49
+pandas>=2.2
+numpy>=1.26
+plotly>=5.22
+
+# Analysis notebooks
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+joblib>=1.4

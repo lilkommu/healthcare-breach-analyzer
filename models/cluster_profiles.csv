@@ -1,0 +1,6 @@
+cluster,n,median_affected,total_affected_M,mean_year,ba_share,top_breach_type,top_entity,share
+0,3429,8175.0,293.0,2021.8,0.21,Hacking/IT Incident,Healthcare Provider,0.44
+1,1409,1654.0,23.7,2018.4,0.11,Unauthorized Access/Disclosure,Healthcare Provider,0.18
+2,940,3000.0,189.4,2019.7,0.29,Hacking/IT Incident,Health Plan,0.12
+3,1191,5696.0,519.7,2019.9,1.0,Hacking/IT Incident,Business Associate,0.15
+4,819,2000.0,12.7,2014.4,0.02,Theft,Healthcare Provider,0.11
