@@ -238,6 +238,37 @@ with tab_vectors:
         st.caption("Rule-based extraction — no trained classifier; ~17% of narratives state no "
                    "clear mechanism and are labeled Other/unspecified.")
 
+        st.subheader("From vectors to prevention")
+        st.markdown(
+            "Each attack vector in this data maps to well-established controls. The strongest "
+            "evidence that controls work is in this dataset itself: the stolen-device era — half "
+            "of all breaches in 2010 — collapsed to near zero once device encryption became "
+            "standard practice."
+        )
+        prevention = pd.DataFrame([
+            ["Phishing / email compromise", "~18%", "4,845",
+             "Multi-factor authentication; phishing training; limit PHI stored in mailboxes"],
+            ["Ransomware", "~19%", "12,060",
+             "Offline, tested backups; prompt patching; MFA on remote access; network segmentation"],
+            ["Other hacking / IT intrusion", "~21%", "9,967",
+             "Regular risk analysis (OCR's most-fined failure); patch management; disable unused remote access"],
+            ["Insider snooping / misuse", "~4%", "1,670",
+             "Least-privilege access; audit logs with alerts; revoke access immediately at termination"],
+            ["Stolen device / burglary", "~7%", "2,340",
+             "Full-disk encryption (retired this vector historically); physical security; no local PHI storage"],
+            ["Misdirected / inadvertent disclosure", "~10%", "1,669",
+             "Address verification and mail-merge QA; DLP rules on email; four-eyes checks on bulk mailings"],
+            ["Lost device / records", "~3%", "1,673",
+             "Encryption; device inventory and tracking; minimize portable media"],
+            ["Improper disposal", "~1%", "1,821",
+             "Shredding and certified media destruction; disposal vendor contracts"],
+        ], columns=["Attack vector", "Share of narrated breaches", "Median individuals affected",
+                    "Primary preventive controls"])
+        st.dataframe(prevention, width="stretch", hide_index=True)
+        st.caption("Vendor risk cuts across all vectors: Business Associates account for ~50% of "
+                   "all affected records — vendor security requirements, BAAs, and data "
+                   "minimization matter as much as any internal control.")
+
 # ------------------------------------------------------------------ risk model
 with tab_risk:
     model, cols, imp = load_risk_model()
