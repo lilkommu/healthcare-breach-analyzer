@@ -4,7 +4,9 @@ Analysis of the **HHS Office for Civil Rights (OCR) Breach Portal** — every re
 unsecured protected health information affecting **500+ individuals** since reporting began.
 7,795 breaches, October 2009 – July 2026, ~1.04 billion individual records affected.
 
-**Live dashboard:** _(pending deploy — see below)_
+**Live dashboard:** 
+
+https://healthcare-breach-analyzer.streamlit.app/
 
 ## What the data actually shows
 
@@ -91,12 +93,6 @@ streamlit run app\streamlit_app.py
 Re-run the analysis end-to-end: execute `notebooks/eda.ipynb`, then `notebooks/clustering.ipynb`,
 then `notebooks/text_mining.ipynb` (regenerates the derived CSVs and the persisted model).
 
-## Deploy (Streamlit Cloud)
-
-1. Push this repo to GitHub (keep `data/*.csv` committed — the app reads `data/breach_clustered.csv`).
-2. On [share.streamlit.io](https://share.streamlit.io): New app, select the repo, set
-   main file `app/streamlit_app.py`.
-3. Dependencies install from `requirements.txt` automatically.
 
 ## Sources
 
